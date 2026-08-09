@@ -13,7 +13,7 @@ The experiments live in the Jupyter notebooks:
 - `model_a_and_d.ipynb` — baseline + final custom model
 - `model_c.ipynb` — regularized CNN learning-rate sweep
 - `Main_2.ipynb` — deeper-layers experiment (Model B)
-- `testing_models.ipynb` — loads and evaluates `best_model.keras` on the test set
+<!-- - `testing_models.ipynb` — loads and evaluates `best_model.keras` on the test set -->
 
 ### Serving the model (FastAPI)
 ```bash
