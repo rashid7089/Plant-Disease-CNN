@@ -1,4 +1,24 @@
-dataset/
-*.zip
+# Python & Caches
+__pycache__/
+*.py[cod]
 
-*.DS_Store
+# Virtual Environments
+.venv/
+env/
+venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Model Artifacts & Heavy Binaries
+models/*.pth
+models/*.pt
+models/*.h5
+models/*.onnx
+models/*.pkl
+models/*.safetensors
+
+# macOS system files (optional but good practice)
+.DS_Store
+
+testing_models.ipynb

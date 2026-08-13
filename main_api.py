@@ -11,7 +11,7 @@ CLASS_NAMES = ["Healthy", "Powdery", "Rust"]
 app = FastAPI(title="Plant Disease Classifier")
 
 # Load the trained model once, when the server starts
-model = tf.keras.models.load_model("best_model.keras")
+model = tf.keras.models.load_model("./models/best_model.keras")
 
 
 @app.get("/")
