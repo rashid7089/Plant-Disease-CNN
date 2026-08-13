@@ -6,6 +6,26 @@
 
 Classifies plant leaf images into three categories — **Healthy**, **Powdery**, and **Rust** — using a custom CNN. Achieves **0.95 test accuracy** and **0.95 macro F1-score** with the final Model D architecture.
 
+## Repository Structure
+
+```
+.
+├── model_a.ipynb          # Model A — baseline
+├── model_b.ipynb          # Model B — deeper
+├── model_c.ipynb          # Model C — regularized
+├── model_d.ipynb          # Model D — final custom CNN
+├── testing_models.ipynb   # Evaluates the final model
+├── models/                # Trained .keras models
+│   ├── best_model.keras   # Final production model (Model D)
+│   ├── model_a.keras
+│   ├── model_c_best.keras
+│   ├── model_final.keras
+│   └── model_final_best.keras
+├── main_api.py            # FastAPI inference app
+├── Methodology.md         # Full methodology write-up
+└── README.md
+```
+
 ## Dataset Cleaning & Checking
 
 - **Source:** Plant Disease Recognition Dataset from Kaggle (`rashikrahmanpritom/plant-disease-recognition-dataset`).
@@ -25,7 +45,7 @@ Classifies plant leaf images into three categories — **Healthy**, **Powdery**,
 
 ## Model & Final Configuration
 
-**Final model:** Model D Custom CNN (`best_model.keras`)
+**Final model:** Model D Custom CNN (`models/best_model.keras`)
 
 **Input size:** 224 × 224 RGB
 
@@ -66,7 +86,7 @@ Input (224, 224, 3)
 
 ## API
 
-A FastAPI app is provided in `main_api.py`. It loads `best_model.keras` and exposes a `/predict` endpoint for image classification.
+A FastAPI app is provided in `main_api.py`. It loads `models/best_model.keras` and exposes a `/predict` endpoint for image classification.
 
 Run it with:
 
